@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator App</title>
+
+</head>
+<body>
+
+    <H1>Calculator App using Flask</H1>
+
+    <form action="/send" method="POST">
+        <label for="num1"> Enter First Number</label>
+        <input type="text" name="num1">
+
+        <br>
+        <br>
+        <br>
+
+        <label for="num2"> Enter Second Number</label>
+        <input type="text" name="num2">
+
+        <br>
+        <br>
+        <br>
+
+        <select name="operation">
+            <option value="add">Add</option>
+            <option value="sub">Subtract</option>
+            <option value="mult">Multiply</option>
+            <option value="div">Divide</option>
+        </select>
+
+
+        <br>
+        <br>
+        <br>
+
+        <input type="Submit" value="Calculate">
+    </form>
+    <br>
+    <br>
+    <br>
+<h3>Answer is {{sum}}</h3>
+
+</body>
+</html>

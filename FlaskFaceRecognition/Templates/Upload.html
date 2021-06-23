@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceRecognition</title>
+</head>
+
+<style>
+    form{
+       text-align: center;
+
+    }
+
+    h1,h3{
+        text-align: center;
+        padding: 10px;
+    }
+
+    input[type=file]::file-selector-button {
+        border: none;
+        padding: 10px;
+        border: 1px solid Gray;
+
+    }
+
+
+    input[type="file"] {
+        padding: 15px;
+        font-size : 15px;
+        border: 2px solid Gray;
+        width: 60%;
+    }
+     input[type="submit"] {
+        padding: 15px;
+        font-size : 15px;
+        border: 2px solid Gray;
+        width: 30%;
+    }
+    input[type="submit"]:hover {
+        background-color: silver;
+        transition: 0.5s;
+    }
+
+    img{
+        width: 30%;
+    }
+
+    #red{
+        color: Red;
+        background-color: Black;
+        text-align: center;
+    }
+</style>
+
+<body>
+<h1>Upload the Image file here</h1>
+<h3>(Only "<i>jpg/jpeg</i>" files supported)</h3>
+    <form action="/" method="post" enctype="multipart/form-data" >
+
+        <br>
+
+        <input type="file" name="file-1">
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+
+        <br>
+        <br>
+        <br>
+        <img src="{{url_for('static', filename='Images/' )}}{{Alert}}" alt="Image"/>
+        <br>
+        <h3>{{Alert}}</h3>
+        <h3 id="red">{{Alert1}}</h3>
+
+
+
+
+
+
+    </form>
+
+</body>
+</html>
