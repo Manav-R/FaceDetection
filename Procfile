@@ -1,1 +1,1 @@
-web: gunicorn FlaskFaceDetection:FlaskFacedetection:app
+web: gunicorn FlaskFacedetection:app
