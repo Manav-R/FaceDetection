@@ -3,7 +3,10 @@ import os
 from werkzeug.utils import secure_filename
 from flask import Flask, render_template, request
 
+UPLOAD_FOLDER = os.path.join(os.getcwd(), "Images")
 
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def facecrop(imgname):
    img = cv2.imread(imgname)
@@ -67,8 +70,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-   UPLOAD_FOLDER = os.path.join(os.getcwd(), "Images")
-
-   app = Flask(__name__)
-   app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
    app.run(debug=True)
