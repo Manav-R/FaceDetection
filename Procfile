@@ -1,1 +1,1 @@
-web: gunicorn FlaskFaceRecognition:app
+web: gunicorn wsgi: app
